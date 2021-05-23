@@ -1,4 +1,4 @@
-package co.edu.unbosque.taller_6.demo;
+package co.edu.unbosque.taller_6;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
