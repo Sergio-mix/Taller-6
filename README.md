@@ -1,5 +1,5 @@
-# Taller-6
-## Autores ✒️
+## Taller-6
+### Autores ✒️
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
@@ -9,4 +9,4 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 
 ### Pre-requisitos 📋
 
-## Explicacion funcionamiento programa
+### Explicacion funcionamiento programa
