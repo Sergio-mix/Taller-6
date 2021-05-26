@@ -26,6 +26,7 @@ public class OwnersResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Owner owner) {
+
         owner.setUserName("PepitoPerez3");
         return Response.status(Response.Status.CREATED)
                 .entity(owner)
