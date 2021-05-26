@@ -1,7 +1,6 @@
-package resources.pojos;
+package co.edu.unbosque.taller_6.resources.pojos;
 
 public class Owner {
-    private String userName;
     private Integer personId;
     private String name;
     private String address;
@@ -9,20 +8,12 @@ public class Owner {
 
     public Owner() {
     }
-    public Owner(String userName,Integer personId, String name, String address, String neighborhood){
-        this.userName= userName;
-        this.personId= personId;
-        this.name= name;
-        this.address= address;
-        this.neighborhood= neighborhood;
-    }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public Owner(Integer personId, String name, String address, String neighborhood) {
+        this.personId = personId;
+        this.name = name;
+        this.address = address;
+        this.neighborhood = neighborhood;
     }
 
     public Integer getPersonId() {

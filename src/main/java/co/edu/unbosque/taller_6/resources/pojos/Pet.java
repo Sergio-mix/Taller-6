@@ -1,8 +1,4 @@
-package resources.pojos;
-
-import javafx.scene.image.Image;
-
-import javax.swing.*;
+package co.edu.unbosque.taller_6.resources.pojos;
 
 public class Pet {
     private Integer petId;

@@ -1,6 +1,6 @@
-package resources;
+package co.edu.unbosque.taller_6.resources;
 
-import resources.pojos.Pet;
+import co.edu.unbosque.taller_6.resources.pojos.Pet;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

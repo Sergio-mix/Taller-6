@@ -1,6 +1,6 @@
-package resources;
+package co.edu.unbosque.taller_6.resources;
 
-import resources.pojos.Owner;
+import co.edu.unbosque.taller_6.resources.pojos.Owner;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -15,8 +15,8 @@ public class OwnersResource {
     public Response list() {
 
         List<Owner> owners = new ArrayList<Owner>();
-        owners.add(new Owner("PepitoPerez2",1, "Pepito Perez" ,"Carrera 7","Usaquen"));
-        owners.add(new Owner("ElverGalarga145",2, "Elver Galarga" ,"Calle 116","Usaquen"));
+        owners.add(new Owner(1, "Pepito Perez" ,"Carrera 7","Usaquen"));
+        owners.add(new Owner(2, "Elver Galarga" ,"Calle 116","Usaquen"));
         return Response.ok()
                 .entity(owners)
                 .build();
