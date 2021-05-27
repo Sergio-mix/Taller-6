@@ -95,4 +95,19 @@ public class Owner {
         }
         return mensaje;
     }
+    public String searchPetMicrochip(Integer microchip) {
+        petsResource = new PetsResource();
+        ownersResource= new OwnersResource();
+        petsResource.list();
+        ownersResource.list();
+
+        String mensaje = "";
+        for (int i = 0; i < listPets.size(); i++) {
+            if (listPets.get(i).getMicroChip().equals(microchip)) {
+                mensaje +="Mascota: "+listPets.get(i).getName()+"Propietario: "+ownersResource.getOwners().get(i).getName()+ "User name: " + ownersResource.getOwners().get(i).getUserName() + " " + "Person Id: " + ownersResource.getOwners().get(i).getPersonId() +" " + "Address: " + ownersResource.getOwners().get(i).getAddress() + " " + "Neighborhood: " +
+                        ownersResource.getOwners().get(i).getNeighborhood()  + "\n" ;
+            }
+        }
+        return mensaje;
+    }
 }
