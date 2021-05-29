@@ -21,7 +21,7 @@ public class ImagesResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(@PathParam("petId") Integer petId, Image photo) {
-
+        photo.setPetId(petId);
         return Response.status(Response.Status.CREATED)
                 .entity(photo)
                 .build();

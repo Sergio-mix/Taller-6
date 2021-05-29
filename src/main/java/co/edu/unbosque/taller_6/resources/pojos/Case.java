@@ -7,6 +7,9 @@ public class Case {
     private String description;
     private Integer petId;
 
+    public  Case (){
+
+    }
     public Case(Integer caseId, String created_at, String type, String description, Integer petId) {
         this.caseId = caseId;
         this.created_at = created_at;

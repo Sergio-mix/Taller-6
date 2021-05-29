@@ -1,2 +1,15 @@
-co\edu\unbosque\taller_6\demo\HelloApplication.class
-co\edu\unbosque\taller_6\demo\HelloResource.class
+co\edu\unbosque\taller_6\resources\OwnersWithPetsResource.class
+co\edu\unbosque\taller_6\resources\pojos\Official.class
+co\edu\unbosque\taller_6\resources\ImagesResource.class
+co\edu\unbosque\taller_6\HelloResource.class
+co\edu\unbosque\taller_6\resources\pojos\Owner.class
+co\edu\unbosque\taller_6\PetsApplication.class
+co\edu\unbosque\taller_6\resources\pojos\Image.class
+co\edu\unbosque\taller_6\resources\pojos\Pet.class
+co\edu\unbosque\taller_6\resources\pojos\UserApp.class
+co\edu\unbosque\taller_6\resources\pojos\Vet.class
+co\edu\unbosque\taller_6\resources\pojos\Visit.class
+co\edu\unbosque\taller_6\resources\pojos\Case.class
+co\edu\unbosque\taller_6\resources\OwnersResource.class
+co\edu\unbosque\taller_6\resources\PetsResource.class
+co\edu\unbosque\taller_6\resources\PetsWithOwnersResource.class
