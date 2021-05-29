@@ -6,6 +6,7 @@ public class Vet {
     private String name;
     private String address;
     private String neighborhood;
+    public Vet(){}
 
     public Vet(String username, String name, String address, String neighborhood) {
         this.username = username;
