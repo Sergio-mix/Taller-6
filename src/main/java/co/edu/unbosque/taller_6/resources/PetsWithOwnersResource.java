@@ -46,7 +46,7 @@ public class PetsWithOwnersResource {
         petsResource.list();
         owner.setListPets(petsResource.getPets());
         System.out.println("ENTROOOOOO"+petsResource.getPets().size());
-        String mensaje = "";
+        String mensaje ="";
         if (microchip != null && microchip > 0) {
             mensaje += owner.searchPetMicrochip(microchip);
         }

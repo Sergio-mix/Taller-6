@@ -17,9 +17,10 @@ public class VetsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
 
-        vets.add(new Vet("Rositamel11","Rosa Melano", "Carrera 7", "Usaquen"));
-        vets.add(new Vet("ArmandoCS22", "Armando Casas", "Calle 116", "Usaquen"));
-        vets.add(new Vet("CameloBto33", "Benito Camelo", "Carrera 95", "Engativa"));
+        vets.add(new Vet(1,"Rositamel11","Rosa Melano", "Carrera 7", "Usaquen"));
+        vets.add(new Vet(1,"Rositamel11","Rosa Melano", "Carrera 7", "Usaquen"));
+        vets.add(new Vet(2,"ArmandoCS22", "Armando Casas", "Calle 116", "Usaquen"));
+        vets.add(new Vet(3,"CameloBto33", "Benito Camelo", "Carrera 95", "Engativa"));
 
         return Response.ok()
                 .entity(vets)
@@ -30,9 +31,11 @@ public class VetsResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Vet vet) {
-        vet.setUsername("ElverGalindo44");
+        list();
+        vets.add(vet);
+
         return Response.status(Response.Status.CREATED)
-                .entity(vet)
+                .entity(vets)
                 .build();
     }
 
@@ -45,4 +48,11 @@ public class VetsResource {
                 .build();
     }
 
+    public List<Vet> getVets() {
+        return vets;
+    }
+
+    public void setVets(List<Vet> vets) {
+        this.vets = vets;
+    }
 }

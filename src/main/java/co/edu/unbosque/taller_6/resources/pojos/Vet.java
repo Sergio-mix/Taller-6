@@ -6,13 +6,15 @@ public class Vet {
     private String name;
     private String address;
     private String neighborhood;
+    private Integer vetId;
     public Vet(){}
 
-    public Vet(String username, String name, String address, String neighborhood) {
+    public Vet(Integer vetId,String username, String name, String address, String neighborhood) {
         this.username = username;
         this.name = name;
         this.address = address;
         this.neighborhood = neighborhood;
+        this.vetId=vetId;
     }
 
     public String getUsername() {
@@ -45,5 +47,13 @@ public class Vet {
 
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
+    }
+
+    public Integer getVetId() {
+        return vetId;
+    }
+
+    public void setVetId(Integer vetId) {
+        this.vetId = vetId;
     }
 }
