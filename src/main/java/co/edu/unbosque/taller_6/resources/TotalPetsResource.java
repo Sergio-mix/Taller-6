@@ -43,7 +43,8 @@ public class TotalPetsResource {
                 contador31++;
             }
         }
-        mensaje = "El numero de mascotas que son de especie canino es: " + contador + "\n" +
+        mensaje = "El numero de mascotas registradas es: "+petsResource.getPets().size()+"\n"+
+                "El numero de mascotas que son de especie canino es: " + contador + "\n" +
                 "El numero de mascotas que son de especie felino es: " + contador0 + "\n" +
                 "El numero de mascotas que son de raza Ragdoll es: " + contador1 + "\n" +
                 "El numero de mascotas que son de raza Doberman es: " + contador01 + "\n" +

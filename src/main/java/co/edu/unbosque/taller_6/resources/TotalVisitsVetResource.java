@@ -23,32 +23,22 @@ public class TotalVisitsVetResource {
         visitsResource = new VisitsResource();
         visitsResource.list();
 
-        String mensaje = "";
-        for (int i = 0; i < visitsResource.getVisits().size(); i++) {
-            if (visitsResource.getVisits().get(i).getType().equals("Sterilization")) {
-                mensaje = "El numero de visitas de tipo <Sterilization> Es: " + visitsResource.getSterilization().size() + "\n";
-            }
-            if (visitsResource.getVisits().get(i).getType().equals("Microchip Implantation")) {
-                mensaje += "El numero de visitas de tipo <Microchip Implantation> Es: " + visitsResource.getMicrochipImplantation().size() + "\n";
-            }
-            if (visitsResource.getVisits().get(i).getType().equals("Vaccination")) {
-                mensaje += "El numero de visitas de tipo <Vaccination> Es: " + visitsResource.getVaccination().size() + "\n";
-            }
-            if (visitsResource.getVisits().get(i).getType().equals("Deworming")) {
-                mensaje += "El numero de visitas de tipo <Deworming> Es: " + visitsResource.getDeworming().size() + "\n";
-            }
-            if (visitsResource.getVisits().get(i).getType().equals("Urgency")) {
-                mensaje += "El numero de visitas de tipo <Urgency> Es: " + visitsResource.getUrgency().size() + "\n";
-            }
-            if (visitsResource.getVisits().get(i).getType().equals("Control")) {
-                mensaje += "El numero de visitas de tipo <Control> Es: " + visitsResource.getControl().size() + "\n";
-            }
-        }
-
+        String mensaje = "El numero de visitas en total es: " + visitsResource.getVisits().size() + "\n" +
+                "El numero de visitas de tipo <Sterilization> Es: " + visitsResource.getSterilization().size() + "\n" +
+                "El numero de visitas de tipo <Microchip Implantation> Es: " + visitsResource.getMicrochipImplantation().size() + "\n" +
+                "El numero de visitas de tipo <Vaccination> Es: " + visitsResource.getVaccination().size() + "\n" +
+                "El numero de visitas de tipo <Deworming> Es: " + visitsResource.getDeworming().size() + "\n" +
+                "El numero de visitas de tipo <Urgency> Es: " + visitsResource.getUrgency().size() + "\n" +
+                "El numero de visitas de tipo <Control> Es: " + visitsResource.getControl().size() + "\n";
 
         return Response.ok()
-                .entity(mensaje)
-                .build();
+                .
+
+                        entity(mensaje)
+                .
+
+                        build();
+
     }
 
     @GET
