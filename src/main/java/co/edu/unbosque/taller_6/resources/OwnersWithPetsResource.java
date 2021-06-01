@@ -24,11 +24,10 @@ public class OwnersWithPetsResource {
         String mensaje = "";
 
         for (int i = 0; i < ownersResource.getOwners().size(); i++) {
-            mensaje += "Propietario:" + ownersResource.getOwners().get(i).getName() + " " + "Pet ID: " + owner.getListPets().get(i).getPetId() + " " + "Microchip: " + owner.getListPets().get(i).getMicroChip() + " " + "Name: " + owner.getListPets().get(i).getName() + " " + "Species: " + owner.getListPets().get(i).getSpecies() + " " + "Race: " +
-                    owner.getListPets().get(i).getRace() + " " + "Size: " + owner.getListPets().get(i).getSize() + " " + "Sex: " + owner.getListPets().get(i).getSex() + " " + "Picture: " + owner.getListPets().get(i).getPicture() + " " + "Owner ID: " + owner.getListPets().get(i).getOwnerId() + "\n";
-
-//         mensaje +=
-//            "{\"Propietario\": \"owners.get(i).getName()\", \"Mascota\": \"owner.getListPets().get(i).getName()\"}";
+//            mensaje += "Propietario:" + ownersResource.getOwners().get(i).getName() + " " + "Pet ID: " + owner.getListPets().get(i).getPetId() + " " + "Microchip: " + owner.getListPets().get(i).getMicroChip() + " " + "Name: " + owner.getListPets().get(i).getName() + " " + "Species: " + owner.getListPets().get(i).getSpecies() + " " + "Race: " +
+//                    owner.getListPets().get(i).getRace() + " " + "Size: " + owner.getListPets().get(i).getSize() + " " + "Sex: " + owner.getListPets().get(i).getSex() + " " + "Picture: " + owner.getListPets().get(i).getPicture() + " " + "Owner ID: " + owner.getListPets().get(i).getOwnerId() + "\n";
+         mensaje +=
+            "{\"Propietario\": \"owners.get(i).getName()\", \"Mascota\": \"owner.getListPets().get(i).getName()\"}";
         }
 
         return Response.ok()

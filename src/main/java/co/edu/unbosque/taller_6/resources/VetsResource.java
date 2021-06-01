@@ -17,10 +17,10 @@ public class VetsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
 
-        vets.add(new Vet(1,"Rositamel11","Rosa Melano", "Carrera 7", "Usaquen"));
-        vets.add(new Vet(1,"Rositamel11","Rosa Melano", "Carrera 7", "Usaquen"));
+        vets.add(new Vet(1,"Rositamol11","Rosa Molano", "Carrera 7", "Usaquen"));
+        vets.add(new Vet(1,"Rositamol11","Rosa Molano", "Carrera 7", "Usaquen"));
         vets.add(new Vet(2,"ArmandoCS22", "Armando Casas", "Calle 116", "Usaquen"));
-        vets.add(new Vet(3,"CameloBto33", "Benito Camelo", "Carrera 95", "Engativa"));
+        vets.add(new Vet(3,"CamargoBto33", "Benito Camargo", "Carrera 95", "Engativa"));
 
         return Response.ok()
                 .entity(vets)

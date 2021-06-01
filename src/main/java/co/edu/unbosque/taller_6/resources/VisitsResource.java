@@ -1,5 +1,6 @@
 package co.edu.unbosque.taller_6.resources;
 
+import co.edu.unbosque.taller_6.resources.pojos.TotalVisits;
 import co.edu.unbosque.taller_6.resources.pojos.Vet;
 import co.edu.unbosque.taller_6.resources.pojos.Visit;
 
@@ -26,6 +27,7 @@ public class VisitsResource {
     private List<String> deworming;
     private List<String> urgency;
     private List<String> control;
+    private TotalVisits totalVisits;
 
 
     @GET
@@ -72,6 +74,7 @@ public class VisitsResource {
                 contador6++;
             }
         }
+        totalVisits = new TotalVisits(sterilization,microchipImplantation,vaccination,deworming,urgency,control);
         return Response.ok()
                 .entity(visits)
                 .build();

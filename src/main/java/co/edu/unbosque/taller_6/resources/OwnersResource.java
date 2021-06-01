@@ -24,9 +24,8 @@ public class OwnersResource {
     public Response list() {
 
         owners.add(new Owner("PepitoPerez2", 1, "Pepito Perez", "Carrera 7", "Usaquen"));
-        owners.add(new Owner("ElverGalarga145", 2, "Elver Galarga", "Calle 116", "Kennedy"));
+        owners.add(new Owner("Elver145", 2, "Elver Garcia", "Calle 116", "Kennedy"));
         owners.add(new Owner("PepitoPerez3", 3, "Pepito Perez2", "Carrera 7", "Engativa"));
-        owners.add(new Owner("PepitoPerez4", 3, "Pepito Perez2", "Carrera 7", "Engativa"));
         for (int i = 0; i < owners.size(); i++) {
             if (owners.get(i).getNeighborhood().equals("Usaquen")) {
                 usaquen.add(owners.get(i).getNeighborhood());
@@ -47,7 +46,8 @@ public class OwnersResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Owner owner) {
-        owner.setUserName("PepitoPerez3");
+        list();
+        owners.add(owner);
         return Response.status(Response.Status.CREATED)
                 .entity(owner)
                 .build();

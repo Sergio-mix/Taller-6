@@ -15,7 +15,7 @@ public class TotalPetsResource {
     public Response totalOwners() {
         petsResource = new PetsResource();
         petsResource.list();
-        int contador = 0,contador0 = 0,contador1 = 0,contador01 = 0,contador2 = 0,contador21=0,contador3 = 0,contador31=0;
+        int contador = 0, contador0 = 0, contador1 = 0, contador01 = 0, contador2 = 0, contador21 = 0, contador3 = 0, contador31 = 0, microchip = 0, esterilizados = 3;
         String mensaje = "";
         for (int i = 0; i < petsResource.getPets().size(); i++) {
             if (petsResource.getPets().get(i).getSpecies().equals("Canino")) {
@@ -42,16 +42,21 @@ public class TotalPetsResource {
             if (petsResource.getPets().get(i).getSex().equals("Hembra")) {
                 contador31++;
             }
+            if (petsResource.getPets().get(i).getMicroChip() != null)
+                microchip++;
         }
-        mensaje = "El numero de mascotas registradas es: "+petsResource.getPets().size()+"\n"+
+        mensaje = "El numero de mascotas registradas es: " + petsResource.getPets().size() + "\n" +
                 "El numero de mascotas que son de especie canino es: " + contador + "\n" +
                 "El numero de mascotas que son de especie felino es: " + contador0 + "\n" +
                 "El numero de mascotas que son de raza Ragdoll es: " + contador1 + "\n" +
                 "El numero de mascotas que son de raza Doberman es: " + contador01 + "\n" +
                 "El numero de mascotas que son de tamaño grande es: " + contador2 + "\n" + "" +
                 "El numero de mascotas que son de tamaño mediano es: " + contador21 + "\n" + "" +
-                "El numero de mascotas que son de sexo macho: " + contador3 + "\n"+
-                "El numero de mascotas que son de sexo hembra: " + contador31;
+                "El numero de mascotas que son de sexo macho: " + contador3 + "\n" +
+                "El numero de mascotas que son de sexo hembra: " + contador31 + "\n" +
+                "El numero de mascotas que tienen microchip es: " + microchip + "\n" +
+                "El numero de mascotas esterilizadas es: " + esterilizados;
+
 
         return Response.ok()
                 .entity(mensaje)
