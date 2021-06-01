@@ -6,10 +6,17 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Class TotalPets
+ */
 @Path("/totalPets")
 public class TotalPetsResource {
     private PetsResource petsResource;
 
+    /**
+     * metodo get owners Total
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response totalOwners() {

@@ -7,9 +7,17 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Class CasesResource
+ */
 @Path("/pets/{petId}/cases")
 public class CasesResource {
-
+    /**
+     * Metodo post
+     * @param petId
+     * @param cases
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

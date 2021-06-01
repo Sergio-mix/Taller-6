@@ -7,6 +7,9 @@ import co.edu.unbosque.taller_6.resources.VisitsResource;
 import javax.sound.midi.Soundbank;
 import java.util.List;
 
+/**
+ * Class Visit
+ */
 public class Visit {
     private Integer visitId;
     private String created_at;
@@ -19,9 +22,21 @@ public class Visit {
     private VisitsResource visitsResource;
     private VetsResource vetResource;
 
+    /**
+     * Constructor
+     */
     public Visit() {
     }
 
+    /**
+     * Constructor
+     * @param visitId
+     * @param created_at
+     * @param type
+     * @param description
+     * @param vetUsername
+     * @param petId
+     */
     public Visit(Integer visitId, String created_at, String type, String description, String vetUsername, Integer petId) {
         this.visitId = visitId;
         this.created_at = created_at;
@@ -31,6 +46,16 @@ public class Visit {
         this.petId = petId;
     }
 
+    /**
+     *
+     * @param visitId
+     * @param created_at
+     * @param type
+     * @param description
+     * @param vetUsername
+     * @param petId
+     * @param microchip
+     */
     public Visit(Integer visitId, String created_at, String type, String description, String vetUsername, Integer petId, Integer microchip) {
         this.visitId = visitId;
         this.created_at = created_at;
@@ -41,62 +66,123 @@ public class Visit {
         this.microchip = microchip;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getVisitId() {
         return visitId;
     }
 
+    /**
+     *
+     * @param visitId
+     */
     public void setVisitId(Integer visitId) {
         this.visitId = visitId;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getCreated_at() {
         return created_at;
     }
 
+    /**
+     *
+     * @param created_at
+     */
     public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     *
+     * @param description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getVetUsername() {
         return vetUsername;
     }
 
+    /**
+     *
+     * @param vetUsername
+     */
     public void setVetUsername(String vetUsername) {
         this.vetUsername = vetUsername;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getPetId() {
         return petId;
     }
 
+    /**
+     *
+     * @param petId
+     */
     public void setPetId(Integer petId) {
         this.petId = petId;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getMicrochip() {
         return microchip;
     }
 
+    /**
+     *
+     * @param microchip
+     */
     public void setMicrochip(Integer microchip) {
         this.microchip = microchip;
     }
 
+    /**
+     * Method to search by type
+     * @param type
+     * @return
+     */
     public String searchType(String type) {
 
         visitsResource = new VisitsResource();
@@ -183,7 +269,13 @@ public class Visit {
 //
 //        return mensaje;
 //}
-public String idVet(Integer vetId){
+
+    /**
+     * Method for the number of visits according to id
+     * @param vetId
+     * @return
+     */
+    public String idVet(Integer vetId){
     vetResource = new VetsResource();
     vetResource.list();
     String mensaje="";

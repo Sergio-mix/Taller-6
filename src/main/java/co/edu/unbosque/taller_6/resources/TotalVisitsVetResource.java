@@ -10,12 +10,18 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Classs TotalVisitsVet
+ */
 @Path("/totalVisitsVet")
 public class TotalVisitsVetResource {
     private VisitsResource visitsResource;
     private VetsResource vetsResource;
 
-
+    /**
+     * Metodo get type
+     * @return
+     */
     @GET
     @Path("/type")
     @Produces(MediaType.APPLICATION_JSON)

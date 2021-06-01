@@ -9,6 +9,9 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class Cases_TotalResource
+ */
 @Path("/Totalcases")
 public class Cases_TotalResource {
     /**

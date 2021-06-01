@@ -6,10 +6,17 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Class TotalOwnersResouerce
+ */
 @Path("/totalOwners")
 public class TotalOwnersResource {
     private OwnersResource ownersResource;
 
+    /**
+     * Metodo get
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response totalOwners() {

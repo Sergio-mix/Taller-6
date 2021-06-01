@@ -10,6 +10,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/**
+ * Class ListPetsWithOwners
+ */
 @Path("/listPetsWithOwners")
 public class PetsWithOwnersResource {
     private OwnersResource ownersResource = new OwnersResource();
@@ -17,6 +20,10 @@ public class PetsWithOwnersResource {
     private Owner owner = new Owner();
     private Pet pet;
 
+    /**
+     * Metodo get
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listPets() {
@@ -38,6 +45,11 @@ public class PetsWithOwnersResource {
                 .build();
     }
 
+    /**
+     * Metodo get microchip
+     * @param microchip
+     * @return
+     */
     @GET
     @Path("/microchip")
     @Produces(MediaType.APPLICATION_JSON)
@@ -55,6 +67,11 @@ public class PetsWithOwnersResource {
                 .build();
     }
 
+    /**
+     * Metodo get for name
+     * @param namePet
+     * @return
+     */
     @GET
     @Path("/namePet")
     @Produces(MediaType.APPLICATION_JSON)
@@ -75,6 +92,11 @@ public class PetsWithOwnersResource {
                 .build();
     }
 
+    /**
+     * metodo get species
+     * @param species
+     * @return
+     */
     @GET
     @Path("/species")
     @Produces(MediaType.APPLICATION_JSON)
@@ -93,6 +115,12 @@ public class PetsWithOwnersResource {
                 .entity(mensaje)
                 .build();
     }
+
+    /**
+     * Metodo get race
+     * @param race
+     * @return
+     */
     @GET
     @Path("/race")
     @Produces(MediaType.APPLICATION_JSON)
@@ -111,6 +139,12 @@ public class PetsWithOwnersResource {
                 .entity(mensaje)
                 .build();
     }
+
+    /**
+     * Metodo get size
+     * @param size
+     * @return
+     */
     @GET
     @Path("/size")
     @Produces(MediaType.APPLICATION_JSON)
@@ -129,6 +163,12 @@ public class PetsWithOwnersResource {
                 .entity(mensaje)
                 .build();
     }
+
+    /**
+     * Metodo get Sex
+     * @param sex
+     * @return
+     */
     @GET
     @Path("/sex")
     @Produces(MediaType.APPLICATION_JSON)

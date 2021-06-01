@@ -10,6 +10,9 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class VisitsResource
+ */
 @Path("/visitVet")
 public class VisitsResource {
     private int contador1 = 0;

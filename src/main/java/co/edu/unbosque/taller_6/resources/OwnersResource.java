@@ -8,6 +8,9 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class OwnersResouerce
+ */
 @Path("/owners")
 
 public class OwnersResource {
@@ -18,7 +21,10 @@ public class OwnersResource {
     private List<String> engativa = new ArrayList<>();
     private PetsResource petsResource = new PetsResource();
 
-
+    /**
+     * Metodo get
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
@@ -42,6 +48,11 @@ public class OwnersResource {
                 .build();
     }
 
+    /**
+     * Metodo post
+     * @param owner
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -53,6 +64,12 @@ public class OwnersResource {
                 .build();
     }
 
+    /**
+     * Metodo put
+     * @param username
+     * @param owner
+     * @return
+     */
     @PUT
     @Path("/{username}")
     @Produces(MediaType.APPLICATION_JSON)

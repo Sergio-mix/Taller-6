@@ -8,11 +8,19 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Class VetsResource
+ */
 @Path("/vets")
 public class VetsResource {
     private Vet vet = new Vet();
     private List<Vet> vets = new ArrayList<Vet>();
 
+    /**
+     * Metodo get
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
@@ -27,6 +35,11 @@ public class VetsResource {
                 .build();
     }
 
+    /**
+     * Metodo post
+     * @param vet
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -39,6 +52,12 @@ public class VetsResource {
                 .build();
     }
 
+    /**
+     * Metodo put
+     * @param username
+     * @param vet
+     * @return
+     */
     @PUT
     @Path("/{username}")
     @Produces(MediaType.APPLICATION_JSON)

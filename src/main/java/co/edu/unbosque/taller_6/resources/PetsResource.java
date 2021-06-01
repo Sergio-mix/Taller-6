@@ -8,6 +8,9 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * PetsResource
+ */
 @Path("/pets")
 public class PetsResource {
     private OwnersResource ownersResource;
@@ -15,6 +18,10 @@ public class PetsResource {
     private Owner owner;
     private List<Pet> pets;
 
+    /**
+     * Metodo get
+     * @return
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
@@ -31,7 +38,11 @@ public class PetsResource {
 
     }
 
-
+    /**
+     * Metodo post
+     * @param pet
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -42,6 +53,12 @@ public class PetsResource {
                 .build();
     }
 
+    /**
+     * Metodo put
+     * @param id
+     * @param pet
+     * @return
+     */
     @PUT
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)

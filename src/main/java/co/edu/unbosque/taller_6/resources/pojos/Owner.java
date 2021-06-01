@@ -6,6 +6,9 @@ import co.edu.unbosque.taller_6.resources.PetsResource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class Owner
+ */
 public class Owner {
     private String userName;
     private Integer personId;
@@ -16,10 +19,20 @@ public class Owner {
     private OwnersResource ownersResource;
     private PetsResource petsResource;
 
-
+    /**
+     * Constructor
+     */
     public Owner() {
     }
 
+    /**
+     * Constructor
+     * @param userName
+     * @param personId
+     * @param name
+     * @param address
+     * @param neighborhood
+     */
     public Owner(String userName, Integer personId, String name, String address, String neighborhood) {
         this.userName = userName;
         this.personId = personId;
@@ -28,59 +41,115 @@ public class Owner {
         this.neighborhood = neighborhood;
     }
 
-
+    /**
+     *
+     * @return
+     */
     public String getUserName() {
         return userName;
     }
 
+    /**
+     *
+     * @param userName
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getPersonId() {
         return personId;
     }
 
+    /**
+     *
+     * @param personId
+     */
     public void setPersonId(Integer personId) {
         this.personId = personId;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     *
+     * @param address
+     */
     public void setAddress(String address) {
         this.address = address;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getNeighborhood() {
         return neighborhood;
     }
 
+    /**
+     *
+     * @param neighborhood
+     */
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Pet> getListPets() {
         return listPets;
     }
 
+    /**
+     *
+     * @param listPets
+     */
     public void setListPets(List<Pet> listPets) {
         this.listPets = listPets;
     }
 
+    /**
+     *
+     * @param pets
+     */
     public void addPet(List<Pet> pets) {
         listPets = pets;
     }
 
+    /**
+     * method to search for a person with their id
+     * @param personId
+     * @return
+     */
     public String searchPersonId(Integer personId) {
         ownersResource = new OwnersResource();
         ownersResource.list();
@@ -95,6 +164,12 @@ public class Owner {
         }
         return mensaje;
     }
+
+    /**
+     * method to search for a pet by its microchip
+     * @param microchip
+     * @return
+     */
     public String searchPetMicrochip(Integer microchip) {
         petsResource = new PetsResource();
         ownersResource= new OwnersResource();
