@@ -7,6 +7,6 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 - Miguel Angel Sierra Morales - [LINK](https://github.com/MICKISS)
 - Sergio Alejandro Hernandez Zambrano - [LINK](https://github.com/Sergio-mix)
 
-### Pre-requisitos 📋
 
 ### Explicacion funcionamiento programa
+importar el json (Taller 6.postman_collection) de la carpeta (PostmanCollection) al Postman y correr el servidor.
