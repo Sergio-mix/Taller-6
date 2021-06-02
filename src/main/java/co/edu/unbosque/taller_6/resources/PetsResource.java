@@ -63,6 +63,7 @@ public class PetsResource {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response modify(@PathParam("id") Integer id, Pet pet) {
+        pet.setPetId(id);
         return Response.ok()
                 .entity(pet)
                 .build();

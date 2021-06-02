@@ -25,7 +25,7 @@ public class CasesResource {
     public Response createCase(@PathParam("petId") Integer petId, Case cases) {
 
         Response result = null;
-
+        cases.setCaseId(2);
         String perdida = "PERDIDA";
         String robo = "ROBO";
         String fallecimiento = "FALLECIMIENTO";

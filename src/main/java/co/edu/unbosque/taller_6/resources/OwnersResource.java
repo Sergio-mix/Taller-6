@@ -60,6 +60,7 @@ public class OwnersResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Owner owner) {
         list();
+        owner.setPersonId(5);
         owners.add(owner);
 
         return Response.status(Response.Status.CREATED)

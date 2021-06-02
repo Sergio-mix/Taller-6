@@ -189,4 +189,24 @@ public class Owner {
         }
         return m1;
     }
+    public Map searchPetId(Integer id) {
+        petsResource = new PetsResource();
+        ownersResource = new OwnersResource();
+        petsResource.list();
+        ownersResource.list();
+
+        Map m1 = new LinkedHashMap();
+
+        for (int i = 0; i < listPets.size(); i++) {
+            if (listPets.get(i).getPetId().equals(id)) {
+                m1.put("Mascota", listPets.get(i).getName());
+                m1.put("Propietario", ownersResource.getOwners().get(i).getName());
+                m1.put("User name", ownersResource.getOwners().get(i).getUserName());
+                m1.put("Person Id", ownersResource.getOwners().get(i).getPersonId());
+                m1.put("Address", ownersResource.getOwners().get(i).getAddress());
+                m1.put("Neighborhood", ownersResource.getOwners().get(i).getNeighborhood());
+            }
+        }
+        return m1;
+    }
 }

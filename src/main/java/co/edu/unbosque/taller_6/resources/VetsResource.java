@@ -45,10 +45,11 @@ public class VetsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Vet vet) {
         list();
-        vets.add(vet);
+        vet.setVetId(4);
+
 
         return Response.status(Response.Status.CREATED)
-                .entity(vets)
+                .entity(vet)
                 .build();
     }
 

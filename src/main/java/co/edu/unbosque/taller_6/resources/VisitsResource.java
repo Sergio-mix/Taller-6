@@ -45,13 +45,13 @@ public class VisitsResource {
         control = new ArrayList<>();
         visits = new ArrayList<>();
 
-        visits.add(new Visit(1, "Kennedy", "Sterilization", "Animal Grande", "Rositamel11", 1));
-        visits.add(new Visit(1, "Kennedy", "Sterilization", "Animal Grande", "Rositamel11", 1));
-        visits.add(new Visit(2, "Kennedy", "Microchip Implantation", "Animal Grande", "ArmandoCS22", 1));
-        visits.add(new Visit(3, "Engativa", "Vaccination", "Animal Mediano", "ArmandoCS22", 2));
-        visits.add(new Visit(4, "Engativa", "Deworming", "Animal Mediano", "CameloBto33", 2));
-        visits.add(new Visit(5, "Usaquen", "Urgency", "Animal Pequeño", "CameloBto33", 3));
-        visits.add(new Visit(6, "Usaquen", "Control", "Animal Pequeño", "CameloBto33", 3));
+        visits.add(new Visit(1, "27/05/2020", "Sterilization", "Animal Grande", "Rositamel11", 1));
+        visits.add(new Visit(2, "28/05/2020", "Sterilization", "Animal Grande", "Rositamel11", 1));
+        visits.add(new Visit(3, "29/05/2020", "Microchip Implantation", "Animal Grande", "ArmandoCS22", 1));
+        visits.add(new Visit(4, "30/05/2020", "Vaccination", "Animal Mediano", "ArmandoCS22", 2));
+        visits.add(new Visit(5, "01/06/2020", "Deworming", "Animal Mediano", "CameloBto33", 2));
+        visits.add(new Visit(6, "02/06/2020", "Urgency", "Animal Pequeño", "CameloBto33", 3));
+        visits.add(new Visit(7, "06/07/2020", "Control", "Animal Pequeño", "CameloBto33", 3));
 
         for (Visit value : visits) {
             if (value.getType().equals("Sterilization")) {
@@ -93,13 +93,9 @@ public class VisitsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createVisit(Visit visite) {
         visit = new Visit();
-        visits = new ArrayList<>();
-        list();
-
-        visits.add(visite);
-
+        visite.setVisitId(7);
         return Response.status(Response.Status.CREATED)
-                .entity(visits)
+                .entity(visite)
                 .build();
     }
 

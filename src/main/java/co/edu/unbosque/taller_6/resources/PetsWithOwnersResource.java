@@ -51,6 +51,22 @@ public class PetsWithOwnersResource {
                 .entity(json)
                 .build();
     }
+    @GET
+    @Path("/petId")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listPetsId(@QueryParam("petId") Integer petId) {
+        ownersResource.list();
+        petsResource.list();
+        owner.setListPets(petsResource.getPets());
+        JsonObject json = new JsonObject();
+
+        if (petId != null && petId > 0) {
+            json.put(petId.toString(), owner.searchPetId(petId));
+        }
+        return Response.ok()
+                .entity(json)
+                .build();
+    }
 
     /**
      * microchip search method (get)
