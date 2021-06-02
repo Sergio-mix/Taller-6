@@ -37,6 +37,7 @@ public class OwnersWithPetsResource {
         JsonObject json = new JsonObject();
         for (int i = 0; i < ownersResource.getOwners().size(); i++) {
             Map m1 = new LinkedHashMap();
+
             m1.put("Propietario", ownersResource.getOwners().get(i).getName());
             m1.put("Pet ID", owner.getListPets().get(i).getPetId());
             m1.put("Microchip", owner.getListPets().get(i).getMicroChip());
@@ -87,6 +88,7 @@ public class OwnersWithPetsResource {
         for (int i = 0; i < ownersResource.getOwners().size(); i++) {
             if (ownersResource.getOwners().get(i).getName().equals(nameOwner)) {
                 Map m1 = new LinkedHashMap();
+
                 m1.put("Pet ID", owner.getListPets().get(i).getPetId());
                 m1.put("Microchip", owner.getListPets().get(i).getMicroChip());
                 m1.put("Name", owner.getListPets().get(i).getName());
@@ -119,6 +121,7 @@ public class OwnersWithPetsResource {
         for (int i = 0; i < ownersResource.getOwners().size(); i++) {
             if (ownersResource.getOwners().get(i).getNeighborhood().equals(neighborhood)) {
                 Map m1 = new LinkedHashMap();
+
                 m1.put("Propietario", ownersResource.getOwners().get(i).getName());
                 m1.put("Pet ID", owner.getListPets().get(i).getPetId());
                 m1.put("Microchip", owner.getListPets().get(i).getMicroChip());
@@ -130,7 +133,7 @@ public class OwnersWithPetsResource {
                 m1.put("Picture", owner.getListPets().get(i).getPicture());
                 m1.put("Owner ID", owner.getListPets().get(i).getOwnerId());
 
-                json.put("listPets-" + i, m1);
+                json.put("listPets-" + (aux += 1), m1);
             }
         }
 
