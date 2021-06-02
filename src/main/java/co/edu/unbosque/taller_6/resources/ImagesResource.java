@@ -12,10 +12,11 @@ import javax.ws.rs.core.Response;
 @Path("/pets/{petId}/images")
 public class ImagesResource {
     /**
-     * Create image
-     * @param petId
-     * @param photo
-     * @return
+     * Method to create image
+     *
+     * @param petId Pet Id
+     * @param photo Pet photography
+     * @return photo
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -26,7 +27,5 @@ public class ImagesResource {
                 .entity(photo)
                 .build();
     }
-
-
 
 }

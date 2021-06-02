@@ -21,6 +21,7 @@ public class Image {
 
     /**
      * Constructor
+     *
      * @param petId
      * @param image
      * @param description
@@ -32,7 +33,6 @@ public class Image {
     }
 
     /**
-     *
      * @return
      */
     public String getImage() {
@@ -40,7 +40,6 @@ public class Image {
     }
 
     /**
-     *
      * @param image
      */
     public void setImage(String image) {
@@ -48,7 +47,6 @@ public class Image {
     }
 
     /**
-     *
      * @return
      */
     public String getDescription() {
@@ -56,7 +54,6 @@ public class Image {
     }
 
     /**
-     *
      * @param description
      */
     public void setDescription(String description) {
@@ -64,7 +61,6 @@ public class Image {
     }
 
     /**
-     *
      * @return
      */
     public Integer getPetId() {
@@ -72,7 +68,6 @@ public class Image {
     }
 
     /**
-     *
      * @param petId
      */
     public void setPetId(Integer petId) {

@@ -8,7 +8,6 @@ public class Official {
     private String name;
 
     /**
-     *
      * @param username
      * @param name
      */
@@ -18,7 +17,6 @@ public class Official {
     }
 
     /**
-     *
      * @return
      */
     public String getUsername() {
@@ -26,7 +24,6 @@ public class Official {
     }
 
     /**
-     *
      * @param username
      */
     public void setUsername(String username) {
@@ -34,7 +31,6 @@ public class Official {
     }
 
     /**
-     *
      * @return
      */
     public String getName() {
@@ -42,7 +38,6 @@ public class Official {
     }
 
     /**
-     *
      * @param name
      */
     public void setName(String name) {

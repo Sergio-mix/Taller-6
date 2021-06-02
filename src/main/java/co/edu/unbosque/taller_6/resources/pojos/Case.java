@@ -13,12 +13,13 @@ public class Case {
     /**
      * Constructor
      */
-    public  Case (){
+    public Case() {
 
     }
 
     /**
      * Constructor
+     *
      * @param caseId
      * @param created_at
      * @param type
@@ -34,7 +35,6 @@ public class Case {
     }
 
     /**
-     *
      * @return
      */
     public Integer getCaseId() {
@@ -42,7 +42,6 @@ public class Case {
     }
 
     /**
-     *
      * @param caseId
      */
     public void setCaseId(Integer caseId) {
@@ -50,7 +49,6 @@ public class Case {
     }
 
     /**
-     *
      * @return
      */
     public String getCreated_at() {
@@ -58,7 +56,6 @@ public class Case {
     }
 
     /**
-     *
      * @param created_at
      */
     public void setCreated_at(String created_at) {
@@ -66,7 +63,6 @@ public class Case {
     }
 
     /**
-     *
      * @return
      */
     public String getType() {
@@ -74,7 +70,6 @@ public class Case {
     }
 
     /**
-     *
      * @param type
      */
     public void setType(String type) {
@@ -82,7 +77,6 @@ public class Case {
     }
 
     /**
-     *
      * @return
      */
     public String getDescription() {
@@ -90,7 +84,6 @@ public class Case {
     }
 
     /**
-     *
      * @param description
      */
     public void setDescription(String description) {
@@ -98,7 +91,6 @@ public class Case {
     }
 
     /**
-     *
      * @return
      */
     public Integer getPetId() {
@@ -106,7 +98,6 @@ public class Case {
     }
 
     /**
-     *
      * @param petId
      */
     public void setPetId(Integer petId) {

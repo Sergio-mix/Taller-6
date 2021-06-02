@@ -14,26 +14,27 @@ public class Vet {
     /**
      * Constructor
      */
-    public Vet(){}
+    public Vet() {
+    }
 
     /**
      * Constructor
+     *
      * @param vetId
      * @param username
      * @param name
      * @param address
      * @param neighborhood
      */
-    public Vet(Integer vetId,String username, String name, String address, String neighborhood) {
+    public Vet(Integer vetId, String username, String name, String address, String neighborhood) {
         this.username = username;
         this.name = name;
         this.address = address;
         this.neighborhood = neighborhood;
-        this.vetId=vetId;
+        this.vetId = vetId;
     }
 
     /**
-     *
      * @return
      */
     public String getUsername() {
@@ -41,7 +42,6 @@ public class Vet {
     }
 
     /**
-     *
      * @param username
      */
     public void setUsername(String username) {
@@ -49,7 +49,6 @@ public class Vet {
     }
 
     /**
-     *
      * @return
      */
     public String getName() {
@@ -57,7 +56,6 @@ public class Vet {
     }
 
     /**
-     *
      * @param name
      */
     public void setName(String name) {
@@ -65,7 +63,6 @@ public class Vet {
     }
 
     /**
-     *
      * @return
      */
     public String getAddress() {
@@ -73,7 +70,6 @@ public class Vet {
     }
 
     /**
-     *
      * @param address
      */
     public void setAddress(String address) {
@@ -81,7 +77,6 @@ public class Vet {
     }
 
     /**
-     *
      * @return
      */
     public String getNeighborhood() {
@@ -89,7 +84,6 @@ public class Vet {
     }
 
     /**
-     *
      * @param neighborhood
      */
     public void setNeighborhood(String neighborhood) {
@@ -97,7 +91,6 @@ public class Vet {
     }
 
     /**
-     *
      * @return
      */
     public Integer getVetId() {
@@ -105,7 +98,6 @@ public class Vet {
     }
 
     /**
-     *
      * @param vetId
      */
     public void setVetId(Integer vetId) {

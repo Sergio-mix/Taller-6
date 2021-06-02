@@ -15,8 +15,9 @@ import java.util.List;
 @Path("/Totalcases")
 public class Cases_TotalResource {
     /**
-     * Metodo Get point 11
-     * @return
+     * Method to list cases (get) point 11
+     *
+     * @return case
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,20 +25,20 @@ public class Cases_TotalResource {
 
         List<ListCasesType> listCases = new ArrayList<>();
 
-        int perdida= 22;
-        int robo= 12;
-        int fallecimiento= 32;
-        int totalRegistered=perdida+robo+fallecimiento;
+        int perdida = 22;
+        int robo = 12;
+        int fallecimiento = 32;
+        int totalRegistered = perdida + robo + fallecimiento;
+
         listCases.add(new ListCasesType(perdida, "PERDIDA"));
         listCases.add(new ListCasesType(robo, "ROBO"));
         listCases.add(new ListCasesType(fallecimiento, "FALLECIMIENTO"));
-        NumberOfCases numberOfCases = new NumberOfCases(totalRegistered, listCases);
 
+        NumberOfCases numberOfCases = new NumberOfCases(totalRegistered, listCases);
 
         return Response.ok()
                 .entity(numberOfCases)
                 .build();
     }
-
 
 }

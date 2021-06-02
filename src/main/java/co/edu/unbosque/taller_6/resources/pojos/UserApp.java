@@ -12,6 +12,7 @@ public class UserApp {
 
     /**
      * Constructor
+     *
      * @param username
      * @param password
      * @param email
@@ -25,7 +26,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @return
      */
     public String getUsername() {
@@ -33,7 +33,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @param username
      */
     public void setUsername(String username) {
@@ -41,7 +40,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @return
      */
     public String getPassword() {
@@ -49,7 +47,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @param password
      */
     public void setPassword(String password) {
@@ -57,7 +54,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @return
      */
     public String getEmail() {
@@ -65,7 +61,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @param email
      */
     public void setEmail(String email) {
@@ -73,7 +68,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @return
      */
     public String getRole() {
@@ -81,7 +75,6 @@ public class UserApp {
     }
 
     /**
-     *
      * @param role
      */
     public void setRole(String role) {

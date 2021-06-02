@@ -1,5 +1,7 @@
 package co.edu.unbosque.taller_6.resources;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,8 +16,9 @@ public class TotalOwnersResource {
     private OwnersResource ownersResource;
 
     /**
-     * Metodo get
-     * @return
+     * Method to obtain the number of owners by locality
+     *
+     * @return json with owners by location
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -23,14 +26,14 @@ public class TotalOwnersResource {
         ownersResource = new OwnersResource();
         ownersResource.list();
 
-        String mensaje = "El numero de propietarios registrados es: "+ownersResource.getOwners().size()+"\n"+
-                "El numero de propietarios que hay en Usaquen es:" + ownersResource.getUsaquen().size() + "\n"+
-                "El numero de propietarios que hay en Kennedy es:" + ownersResource.getKennedy().size() + "\n"+
-                "El numero de propietarios que hay en Engativa es:" + ownersResource.getEngativa().size() + "\n";
-        ;
+        JsonObject json = new JsonObject();
+        json.put("El numero de propietarios registrados es:", ownersResource.getOwners().size());
+        json.put("El numero de propietarios que hay en Usaquen es:", ownersResource.getUsaquen().size());
+        json.put("El numero de propietarios que hay en Kennedy es:", ownersResource.getKennedy().size());
+        json.put("El numero de propietarios que hay en Engativa es:", ownersResource.getEngativa().size());
 
         return Response.ok()
-                .entity(mensaje)
+                .entity(json)
                 .build();
     }
 

@@ -4,11 +4,11 @@ package co.edu.unbosque.taller_6.resources.pojos;
  * Class ListCasesType
  */
 public class ListCasesType {
-    private  Integer registered;
+    private Integer registered;
     private String discriminated_by_type;
 
     /**
-     *Constructor
+     * Constructor
      */
     public ListCasesType() {
 
@@ -16,6 +16,7 @@ public class ListCasesType {
 
     /**
      * Constructor
+     *
      * @param registered
      * @param discriminated_by_type
      */
@@ -25,7 +26,6 @@ public class ListCasesType {
     }
 
     /**
-     *
      * @return
      */
     public Integer getRegistered() {
@@ -33,7 +33,6 @@ public class ListCasesType {
     }
 
     /**
-     *
      * @param registered
      */
     public void setRegistered(Integer registered) {
@@ -41,7 +40,6 @@ public class ListCasesType {
     }
 
     /**
-     *
      * @return
      */
     public String getDiscriminated_by_type() {
@@ -49,7 +47,6 @@ public class ListCasesType {
     }
 
     /**
-     *
      * @param discriminated_by_type
      */
     public void setDiscriminated_by_type(String discriminated_by_type) {

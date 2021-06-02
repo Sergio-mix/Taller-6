@@ -12,46 +12,48 @@ import java.util.List;
  * Class OwnersResouerce
  */
 @Path("/owners")
-
 public class OwnersResource {
     private Owner owner = new Owner();
-    private List<Owner> owners = new ArrayList<Owner>();
+    private List<Owner> owners = new ArrayList<>();
     private List<String> usaquen = new ArrayList<>();
     private List<String> kennedy = new ArrayList<>();
     private List<String> engativa = new ArrayList<>();
-    private PetsResource petsResource = new PetsResource();
+
 
     /**
-     * Metodo get
-     * @return
+     * Method to list owners by location(get)
+     *
+     * @return owner list
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
-
         owners.add(new Owner("PepitoPerez2", 1, "Pepito Perez", "Carrera 7", "Usaquen"));
         owners.add(new Owner("Elver145", 2, "Elver Garcia", "Calle 116", "Kennedy"));
         owners.add(new Owner("PepitoPerez3", 3, "Pepito Perez2", "Carrera 7", "Engativa"));
-        for (int i = 0; i < owners.size(); i++) {
-            if (owners.get(i).getNeighborhood().equals("Usaquen")) {
-                usaquen.add(owners.get(i).getNeighborhood());
+
+        for (Owner value : owners) {
+            if (value.getNeighborhood().equals("Usaquen")) {
+                usaquen.add(value.getNeighborhood());
             }
-            if (owners.get(i).getNeighborhood().equals("Kennedy")) {
-                kennedy.add(owners.get(i).getNeighborhood());
+            if (value.getNeighborhood().equals("Kennedy")) {
+                kennedy.add(value.getNeighborhood());
             }
-            if (owners.get(i).getNeighborhood().equals("Engativa")) {
-                engativa.add(owners.get(i).getNeighborhood());
+            if (value.getNeighborhood().equals("Engativa")) {
+                engativa.add(value.getNeighborhood());
             }
         }
+
         return Response.ok()
                 .entity(owners)
                 .build();
     }
 
     /**
-     * Metodo post
-     * @param owner
-     * @return
+     * Method to create owner (post)
+     *
+     * @param owner owner
+     * @return owner
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -59,16 +61,18 @@ public class OwnersResource {
     public Response create(Owner owner) {
         list();
         owners.add(owner);
+
         return Response.status(Response.Status.CREATED)
                 .entity(owner)
                 .build();
     }
 
     /**
-     * Metodo put
-     * @param username
-     * @param owner
-     * @return
+     * method to modify owner(put)
+     *
+     * @param username User name
+     * @param owner    owner Object
+     * @return owner
      */
     @PUT
     @Path("/{username}")

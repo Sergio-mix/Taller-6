@@ -17,10 +17,12 @@ public class Pet {
     /**
      * Constructor
      */
-    public Pet (){}
+    public Pet() {
+    }
 
     /**
      * Constructor
+     *
      * @param petId
      * @param microChip
      * @param name
@@ -44,7 +46,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public Integer getPetId() {
@@ -52,7 +53,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param petId
      */
     public void setPetId(Integer petId) {
@@ -60,7 +60,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public Integer getMicroChip() {
@@ -68,7 +67,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param microChip
      */
     public void setMicroChip(Integer microChip) {
@@ -76,7 +74,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getName() {
@@ -84,7 +81,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param name
      */
     public void setName(String name) {
@@ -92,7 +88,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getSpecies() {
@@ -100,7 +95,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param species
      */
     public void setSpecies(String species) {
@@ -108,7 +102,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getRace() {
@@ -116,7 +109,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param race
      */
     public void setRace(String race) {
@@ -124,7 +116,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getSize() {
@@ -132,7 +123,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param size
      */
     public void setSize(String size) {
@@ -140,7 +130,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getSex() {
@@ -148,7 +137,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param sex
      */
     public void setSex(String sex) {
@@ -156,7 +144,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public String getPicture() {
@@ -164,7 +151,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param picture
      */
     public void setPicture(String picture) {
@@ -172,7 +158,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return
      */
     public Integer getOwnerId() {
@@ -180,7 +165,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param ownerId
      */
     public void setOwnerId(Integer ownerId) {

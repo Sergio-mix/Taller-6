@@ -30,6 +30,7 @@ public class Visit {
 
     /**
      * Constructor
+     *
      * @param visitId
      * @param created_at
      * @param type
@@ -47,7 +48,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param visitId
      * @param created_at
      * @param type
@@ -67,7 +67,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public Integer getVisitId() {
@@ -75,7 +74,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param visitId
      */
     public void setVisitId(Integer visitId) {
@@ -83,7 +81,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public String getCreated_at() {
@@ -91,7 +88,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param created_at
      */
     public void setCreated_at(String created_at) {
@@ -99,7 +95,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public String getType() {
@@ -107,7 +102,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param type
      */
     public void setType(String type) {
@@ -115,7 +109,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public String getDescription() {
@@ -123,7 +116,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param description
      */
     public void setDescription(String description) {
@@ -131,7 +123,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public String getVetUsername() {
@@ -139,7 +130,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param vetUsername
      */
     public void setVetUsername(String vetUsername) {
@@ -147,7 +137,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public Integer getPetId() {
@@ -155,7 +144,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param petId
      */
     public void setPetId(Integer petId) {
@@ -163,7 +151,6 @@ public class Visit {
     }
 
     /**
-     *
      * @return
      */
     public Integer getMicrochip() {
@@ -171,7 +158,6 @@ public class Visit {
     }
 
     /**
-     *
      * @param microchip
      */
     public void setMicrochip(Integer microchip) {
@@ -180,6 +166,7 @@ public class Visit {
 
     /**
      * Method to search by type
+     *
      * @param type
      * @return
      */
@@ -187,15 +174,15 @@ public class Visit {
 
         visitsResource = new VisitsResource();
         visitsResource.list();
-        String mensaje="";
-        int contador =0;
-        for (int i=0; i<visitsResource.getVisits().size();i++){
-            if(type.equals(visitsResource.getVisits().get(i).type)){
+        String mensaje = "";
+        int contador = 0;
+        for (int i = 0; i < visitsResource.getVisits().size(); i++) {
+            if (type.equals(visitsResource.getVisits().get(i).type)) {
                 contador++;
-                mensaje="El numero de visitas para el tipo de "+ visitsResource.getVisits().get(i).getType()+"Es: ";
+                mensaje = "El numero de visitas para el tipo de " + visitsResource.getVisits().get(i).getType() + "Es: ";
             }
         }
-        return mensaje +contador;
+        return mensaje + contador;
 
     }
 //        visitsResource = new VisitsResource();
@@ -272,22 +259,23 @@ public class Visit {
 
     /**
      * Method for the number of visits according to id
+     *
      * @param vetId
      * @return
      */
-    public String idVet(Integer vetId){
-    vetResource = new VetsResource();
-    vetResource.list();
-    String mensaje="";
-    int contador =0;
-    for (int i=0; i<vetResource.getVets().size();i++){
-        if(vetId.equals(vetResource.getVets().get(i).getVetId())){
-            contador++;
-           mensaje="El numero de visitas para la veterinaria: "+ vetResource.getVets().get(i).getName()+"Es: ";
+    public String idVet(Integer vetId) {
+        vetResource = new VetsResource();
+        vetResource.list();
+        String mensaje = "";
+        int contador = 0;
+        for (int i = 0; i < vetResource.getVets().size(); i++) {
+            if (vetId.equals(vetResource.getVets().get(i).getVetId())) {
+                contador++;
+                mensaje = "El numero de visitas para la veterinaria: " + vetResource.getVets().get(i).getName() + "Es: ";
+            }
         }
-    }
-    return mensaje +contador;
+        return mensaje + contador;
 
-}
+    }
 
 }

@@ -4,7 +4,9 @@ import co.edu.unbosque.taller_6.resources.OwnersResource;
 import co.edu.unbosque.taller_6.resources.PetsResource;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Class Owner
@@ -27,6 +29,7 @@ public class Owner {
 
     /**
      * Constructor
+     *
      * @param userName
      * @param personId
      * @param name
@@ -42,7 +45,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public String getUserName() {
@@ -50,7 +52,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param userName
      */
     public void setUserName(String userName) {
@@ -58,7 +59,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public Integer getPersonId() {
@@ -66,7 +66,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param personId
      */
     public void setPersonId(Integer personId) {
@@ -74,7 +73,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public String getName() {
@@ -82,7 +80,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param name
      */
     public void setName(String name) {
@@ -90,7 +87,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public String getAddress() {
@@ -98,7 +94,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param address
      */
     public void setAddress(String address) {
@@ -106,7 +101,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public String getNeighborhood() {
@@ -114,7 +108,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param neighborhood
      */
     public void setNeighborhood(String neighborhood) {
@@ -122,7 +115,6 @@ public class Owner {
     }
 
     /**
-     *
      * @return
      */
     public List<Pet> getListPets() {
@@ -130,7 +122,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param listPets
      */
     public void setListPets(List<Pet> listPets) {
@@ -138,7 +129,6 @@ public class Owner {
     }
 
     /**
-     *
      * @param pets
      */
     public void addPet(List<Pet> pets) {
@@ -147,42 +137,56 @@ public class Owner {
 
     /**
      * method to search for a person with their id
-     * @param personId
-     * @return
+     *
+     * @param personId personId
+     * @return map with pet data
      */
-    public String searchPersonId(Integer personId) {
+    public Map searchPersonId(Integer personId) {
         ownersResource = new OwnersResource();
         ownersResource.list();
-        String mensaje = "";
-        System.out.println(listPets.get(0).getOwnerId());
-        System.out.println(personId);
+
+        Map m1 = new LinkedHashMap();
         for (int i = 0; i < listPets.size(); i++) {
             if (listPets.get(i).getOwnerId().equals(personId)) {
-                mensaje += "Propietario: " + ownersResource.getOwners().get(i).getName() + " " + "Pet ID: " + listPets.get(i).getPetId() + " " + "Microchip: " + listPets.get(i).getMicroChip() + " " + "Name: " + listPets.get(i).getName() + " " + "Species: " + listPets.get(i).getSpecies() + " " + "Race: " +
-                        listPets.get(i).getRace() + " " + "Size: " + listPets.get(i).getSize() + " " + "Sex: " + listPets.get(i).getSex() + " " + "Picture: " + listPets.get(i).getPicture() + " " + "Owner ID: " + listPets.get(i).getOwnerId() + "\n";
+                m1.put("Propietario", ownersResource.getOwners().get(i).getName());
+                m1.put("Pet ID", listPets.get(i).getPetId());
+                m1.put("Microchip", listPets.get(i).getMicroChip());
+                m1.put("Name", listPets.get(i).getName());
+                m1.put("Species", listPets.get(i).getSpecies());
+                m1.put("Race", listPets.get(i).getRace());
+                m1.put("Size", listPets.get(i).getSize());
+                m1.put("Sex", listPets.get(i).getSex());
+                m1.put("Picture", listPets.get(i).getPicture());
+                m1.put("Owner ID", listPets.get(i).getOwnerId());
             }
         }
-        return mensaje;
+        return m1;
     }
 
     /**
      * method to search for a pet by its microchip
-     * @param microchip
-     * @return
+     *
+     * @param microchip pet microchip
+     * @return map with owner data
      */
-    public String searchPetMicrochip(Integer microchip) {
+    public Map searchPetMicrochip(Integer microchip) {
         petsResource = new PetsResource();
-        ownersResource= new OwnersResource();
+        ownersResource = new OwnersResource();
         petsResource.list();
         ownersResource.list();
 
-        String mensaje = "";
+        Map m1 = new LinkedHashMap();
+
         for (int i = 0; i < listPets.size(); i++) {
             if (listPets.get(i).getMicroChip().equals(microchip)) {
-                mensaje +="Mascota: "+listPets.get(i).getName()+"Propietario: "+ownersResource.getOwners().get(i).getName()+ "User name: " + ownersResource.getOwners().get(i).getUserName() + " " + "Person Id: " + ownersResource.getOwners().get(i).getPersonId() +" " + "Address: " + ownersResource.getOwners().get(i).getAddress() + " " + "Neighborhood: " +
-                        ownersResource.getOwners().get(i).getNeighborhood()  + "\n" ;
+                m1.put("Mascota", listPets.get(i).getName());
+                m1.put("Propietario", ownersResource.getOwners().get(i).getName());
+                m1.put("User name", ownersResource.getOwners().get(i).getUserName());
+                m1.put("Person Id", ownersResource.getOwners().get(i).getPersonId());
+                m1.put("Address", ownersResource.getOwners().get(i).getAddress());
+                m1.put("Neighborhood", ownersResource.getOwners().get(i).getNeighborhood());
             }
         }
-        return mensaje;
+        return m1;
     }
 }

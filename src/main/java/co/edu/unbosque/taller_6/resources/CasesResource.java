@@ -13,32 +13,36 @@ import javax.ws.rs.core.Response;
 @Path("/pets/{petId}/cases")
 public class CasesResource {
     /**
-     * Metodo post
-     * @param petId
-     * @param cases
-     * @return
+     * Method to create case (post)
+     *
+     * @param petId Pet id
+     * @param cases Type of case
+     * @return response
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createCase(@PathParam("petId") Integer petId, Case cases) {
-        Response result=null;
+
+        Response result = null;
+
         String perdida = "PERDIDA";
         String robo = "ROBO";
         String fallecimiento = "FALLECIMIENTO";
-    if(cases.getType().toUpperCase().equals(perdida) || cases.getType().toUpperCase().equals(robo) || cases.getType().toUpperCase().equals(fallecimiento)){
-        cases.setPetId(petId);
-        cases.setCaseId(10);
 
-        Response success =Response.status(Response.Status.CREATED)
-                .entity(cases)
-                .build();
-        result =success;
-    }else{
-        Response fault = Response.status(Response.Status.BAD_REQUEST)
-                .entity(cases)
-                .build();
-        result =fault;
+        if (cases.getType().toUpperCase().equals(perdida) || cases.getType().toUpperCase().equals(robo) || cases.getType().toUpperCase().equals(fallecimiento)) {
+            cases.setPetId(petId);
+            cases.setCaseId(10);
+
+            Response success = Response.status(Response.Status.CREATED)
+                    .entity(cases)
+                    .build();
+            result = success;
+        } else {
+            Response fault = Response.status(Response.Status.BAD_REQUEST)
+                    .entity(cases)
+                    .build();
+            result = fault;
         }
 
         return result;

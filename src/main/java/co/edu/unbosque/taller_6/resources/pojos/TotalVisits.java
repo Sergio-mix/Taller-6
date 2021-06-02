@@ -15,6 +15,7 @@ public class TotalVisits {
 
     /**
      * Constructor
+     *
      * @param sterilization
      * @param microchipImplantation
      * @param vaccination
@@ -32,7 +33,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getSterilization() {
@@ -40,7 +40,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param sterilization
      */
     public void setSterilization(List<String> sterilization) {
@@ -48,7 +47,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getMicrochipImplantation() {
@@ -56,7 +54,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param microchipImplantation
      */
     public void setMicrochipImplantation(List<String> microchipImplantation) {
@@ -64,7 +61,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getVaccination() {
@@ -72,7 +68,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param vaccination
      */
     public void setVaccination(List<String> vaccination) {
@@ -80,7 +75,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getDeworming() {
@@ -88,7 +82,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param deworming
      */
     public void setDeworming(List<String> deworming) {
@@ -96,7 +89,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getUrgency() {
@@ -104,7 +96,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param urgency
      */
     public void setUrgency(List<String> urgency) {
@@ -112,7 +103,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @return
      */
     public List<String> getControl() {
@@ -120,7 +110,6 @@ public class TotalVisits {
     }
 
     /**
-     *
      * @param control
      */
     public void setControl(List<String> control) {

@@ -6,7 +6,7 @@ import java.util.List;
  * Class NumberOfCases
  */
 public class NumberOfCases {
-    private  Integer casesT;
+    private Integer casesT;
     private List<ListCasesType> CasesType;
 
     /**
@@ -17,7 +17,6 @@ public class NumberOfCases {
     }
 
     /**
-     *
      * @param casesT
      * @param casesType
      */
@@ -27,7 +26,6 @@ public class NumberOfCases {
     }
 
     /**
-     *
      * @return
      */
     public Integer getCasesT() {
@@ -35,7 +33,6 @@ public class NumberOfCases {
     }
 
     /**
-     *
      * @param casesT
      */
     public void setCasesT(Integer casesT) {
@@ -43,7 +40,6 @@ public class NumberOfCases {
     }
 
     /**
-     *
      * @return
      */
 
@@ -52,7 +48,6 @@ public class NumberOfCases {
     }
 
     /**
-     *
      * @param casesType
      */
     public void setCasesType(List<ListCasesType> casesType) {

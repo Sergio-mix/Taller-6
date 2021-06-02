@@ -2,6 +2,7 @@ package co.edu.unbosque.taller_6.resources;
 
 
 import co.edu.unbosque.taller_6.resources.pojos.Visit;
+import com.github.cliftonlabs.json_simple.JsonObject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -19,7 +20,8 @@ public class TotalVisitsVetResource {
     private VetsResource vetsResource;
 
     /**
-     * Metodo get type
+     * method to obtain the list of owners (get)
+     *
      * @return
      */
     @GET
@@ -28,22 +30,19 @@ public class TotalVisitsVetResource {
     public Response listPetsOwner() {
         visitsResource = new VisitsResource();
         visitsResource.list();
+        JsonObject json = new JsonObject();
 
-        String mensaje = "El numero de visitas en total es: " + visitsResource.getVisits().size() + "\n" +
-                "El numero de visitas de tipo <Sterilization> Es: " + visitsResource.getSterilization().size() + "\n" +
-                "El numero de visitas de tipo <Microchip Implantation> Es: " + visitsResource.getMicrochipImplantation().size() + "\n" +
-                "El numero de visitas de tipo <Vaccination> Es: " + visitsResource.getVaccination().size() + "\n" +
-                "El numero de visitas de tipo <Deworming> Es: " + visitsResource.getDeworming().size() + "\n" +
-                "El numero de visitas de tipo <Urgency> Es: " + visitsResource.getUrgency().size() + "\n" +
-                "El numero de visitas de tipo <Control> Es: " + visitsResource.getControl().size() + "\n";
+        json.put("El numero de visitas en total es", visitsResource.getVisits().size());
+        json.put("El numero de visitas de tipo <Sterilization> Es", visitsResource.getSterilization().size());
+        json.put("El numero de visitas de tipo <Microchip Implantation> Es", visitsResource.getMicrochipImplantation().size());
+        json.put("El numero de visitas de tipo <Vaccination> Es", visitsResource.getVaccination().size());
+        json.put("El numero de visitas de tipo <Deworming> Es", visitsResource.getDeworming().size());
+        json.put("El numero de visitas de tipo <Urgency> Es", visitsResource.getUrgency().size());
+        json.put("El numero de visitas de tipo <Control> Es", visitsResource.getControl().size());
 
         return Response.ok()
-                .
-
-                        entity(mensaje)
-                .
-
-                        build();
+                .entity(json)
+                .build();
 
     }
 
@@ -53,26 +52,28 @@ public class TotalVisitsVetResource {
     public Response listPetsMicrochip() {
         vetsResource = new VetsResource();
         vetsResource.list();
+
         int contador1 = 1;
         int contador2 = 1;
         int contador3 = 1;
 
-        String mensaje = "";
+        JsonObject json = new JsonObject();
         for (int i = 0; i < vetsResource.getVets().size(); i++) {
             if (vetsResource.getVets().get(i).getVetId().equals(1)) {
-                mensaje = "El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es:" + contador1++ + "\n";
+                json.put("El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es", contador1++);
             }
+
             if (vetsResource.getVets().get(i).getVetId().equals(2)) {
-                mensaje += "El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es:" + contador2++ + "\n";
+                json.put("El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es", contador2++);
 
             }
             if (vetsResource.getVets().get(i).getVetId().equals(3)) {
-                mensaje += "El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es:" + contador3++ + "\n";
+                json.put("El numero de visitas que tuvo la veterinaria " + vetsResource.getVets().get(i).getName() + " Es", contador3++);
 
             }
         }
         return Response.ok()
-                .entity(mensaje)
+                .entity(json)
                 .build();
     }
 }
